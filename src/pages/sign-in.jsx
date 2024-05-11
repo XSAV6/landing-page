@@ -5,12 +5,14 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import twitterLogo from '@/assets/img/twitter-logo.svg'
+import pattern from '@/assets/img/pattern.png'
 
 export function SignIn() {
   return (
     <section className="m-8 flex gap-4">
       <div className="w-full lg:w-3/5 mt-24">
-      <Link to="/home" className="text-gray-900 ml-1 absolute top-4 left-4  cursor-pointer">
+      <Link to="/landing-page/home" className="text-gray-900 ml-1 absolute top-4 left-4  cursor-pointer">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 ">
   <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
 </svg>
@@ -105,20 +107,20 @@ export function SignIn() {
               <span>Sign in With Google</span>
             </Button>
             <Button size="lg" color="white" className="flex items-center gap-2 justify-center shadow-md" fullWidth>
-              <img src="/img/twitter-logo.svg" height={24} width={24} alt="" />
+              <img src={twitterLogo} height={24} width={24} alt="twitter logo" />
               <span>Sign in With Twitter</span>
             </Button>
           </div>
           <Typography variant="paragraph" className="text-center text-blue-gray-500 font-medium mt-4">
             Not registered?
-            <Link to="/sign-up" className="text-gray-900 ml-1">Create account</Link>
+            <Link to="/landing-page/sign-up" className="text-gray-900 ml-1">Create account</Link>
           </Typography>
         </form>
 
       </div>
       <div className="w-2/5 h-full hidden lg:block">
         <img
-          src="/img/pattern.png"
+          src={pattern}
           className="h-full w-full object-cover rounded-3xl"
         />
       </div>
